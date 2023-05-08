@@ -1,8 +1,7 @@
 var control = 1;
 var pass;
-var ad = document.getElementById("admin").value;
-var encr = ad ^ 986727;
-document.querySelector('#pass').onkeyup = enterPerte;
+var encr = 0;
+document.querySelector('#admin').onkeyup = enterte;
 
 
 function surt() {
@@ -115,6 +114,8 @@ function playgame(game) {
     document.getElementById("gameNew").innerHTML = contanidor;
 
 }
-function enterPerte() {
-    if (encr == 293784) document.getElementById("androidNew").hidden = false;
+function enterte() {
+    var ad = document.getElementById("admin").value;
+    var encr = ad ^ 986727;
+    if (encr == 293784) document.getElementById("android").hidden = false;
 }
