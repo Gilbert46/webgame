@@ -1,6 +1,7 @@
 var control = 1;
 var pass;
 var encr = 0;
+var ad = 0;
 document.querySelector('#admin').onkeyup = enterte;
 
 
@@ -21,9 +22,10 @@ function endavant(){
 }
 
 function playgame(game) {
-    
+    ad = document.getElementById("admin").value;
+    encr = ad ^ 986727;
+    if (encr == 293784) document.getElementById("android").hidden = false;
     if (encr == 293784) document.getElementById("gameNew").hidden = false;
-    
     control = game;
     if (screen.width < 1100) {
         window1 = '<div class = "col-md-12"><div id="game">';
@@ -115,7 +117,7 @@ function playgame(game) {
 
 }
 function enterte() {
-    var ad = document.getElementById("admin").value;
-    var encr = ad ^ 986727;
+    ad = document.getElementById("admin").value;
+    encr = ad ^ 986727;
     if (encr == 293784) document.getElementById("android").hidden = false;
 }
