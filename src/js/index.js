@@ -1,9 +1,5 @@
 var control = 1;
 var pass;
-var encr = 0;
-var ad = 0;
-document.querySelector('#admin').onkeyup = enterte;
-
 
 function surt() {
     contanidor = "<img src='' alt=''>";
@@ -22,9 +18,8 @@ function endavant(){
 }
 
 function playgame(game) {
-    ad = document.getElementById("admin").value;
-    encr = ad ^ 986727;
-    if (encr == 293784) document.getElementById("android").hidden = false;
+    var ad = document.getElementById("admin").value;
+    var encr = ad ^ 986727;
     if (encr == 293784) document.getElementById("gameNew").hidden = false;
     control = game;
     if (screen.width < 1100) {
@@ -83,7 +78,7 @@ function playgame(game) {
 
     if (game == 21) contanidor = window1 + butons + window2 + "https://gilbertvs.github.io/city2/" + window3;
 
-    if (game == 22) contanidor = window1 + butons + window2 + "https://simmer.io/@Equalitzator/objectivepiece" + window3;
+    if (game == 22) contanidor = window1 + butons + window2 + "https://gilbert46.github.io/rallycars/" + window3;
 
     if (game == 23) contanidor = window1 + butons + window2 + "https://simmer.io/@Equalitzator/tower" + window3;
 
@@ -115,9 +110,4 @@ function playgame(game) {
 
     document.getElementById("gameNew").innerHTML = contanidor;
 
-}
-function enterte() {
-    ad = document.getElementById("admin").value;
-    encr = ad ^ 986727;
-    if (encr == 293784) document.getElementById("android").hidden = false;
 }
